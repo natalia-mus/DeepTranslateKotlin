@@ -9,4 +9,13 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="translate">translate</string>
+    <string name="save_as_txt">save as .txt</string>
+    <string name="save_as_docx">save as .docx</string>
+    <string name="new_file_name">new file name</string>
+    <string name="type_paste_text">type/paste text</string>
+    <string name="output">output</string>
+    <string name="select_file">Select file...</string>
 </resources>

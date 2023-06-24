@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/translate_file_spinners_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/translate_file_spinner_input_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/outlined_background"
+            android:paddingVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/translate_file_spinner_output_language"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/translate_file_spinner_output_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/outlined_background"
+            android:paddingVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/translate_file_spinner_input_language"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/translate_file_select_file_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/translate_file_save_as_docx_section"
+        app:layout_constraintTop_toBottomOf="@+id/translate_file_spinners_section">
+
+        <ImageButton
+            android:id="@+id/translate_file_select_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:src="@drawable/ic_baseline_folder_24"
+            app:layout_constraintTop_toBottomOf="@id/translate_file_spinners_section"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/select_file"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/translate_file_save_as_docx_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/translate_file_select_file_section">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/translate_file_save_as_docx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/save_as_docx"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/translate_file_new_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/outlined_background"
+        android:hint="@string/new_file_name"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/translate_file_save_as_docx_section" />
+
+    <Button
+        android:id="@+id/translate_file_translate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="20dp"
+        android:text="@string/translate"
+        app:layout_constraintBottom_toTopOf="@id/translate_file_output_text"
+        app:layout_constraintTop_toBottomOf="@id/translate_file_new_file_name" />
+
+    <EditText
+        android:id="@+id/translate_file_output_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/outlined_background"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:hint="@string/output"
+        android:padding="10dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/translate_file_translate_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
