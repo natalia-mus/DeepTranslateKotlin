@@ -18,4 +18,6 @@
     <string name="type_paste_text">type/paste text</string>
     <string name="output">output</string>
     <string name="select_file">Select file...</string>
+    <string name="translate_text">Translate text</string>
+    <string name="translate_file">Translate file</string>
 </resources>
